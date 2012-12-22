@@ -1,0 +1,59 @@
+<?php /* @var $this Firemage_CacheSniper_Block_Adminhtml_Cachesniper */ ?>
+<div id="page:main-container">
+    <div class="content-header">
+        <table cellspacing="0">
+            <tbody><tr>
+                <td style="width:50%;"><h3 class="icon-head">Cache Sniper</h3></td>
+                <td class="form-buttons">&nbsp;</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="entry-edit">
+        <form action="<?php echo $this->getActionUrl(); ?>" method="post" id="cachesniperForm">
+            <input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+            <fieldset>
+                <label for="urls"><strong>CMS/Product URLs to Clear: </strong></label>
+
+                <div>
+                    <textarea name="urls" id="urls"><?php echo $this->getRequest()->get('urls'); ?></textarea>
+                    <div class="refetch">
+                        <input type="checkbox" name="refetch" id="refetch" value="1"<?php if ($this->getRequest()->get('refetch', false)): ?> checked="checked"<?php endif; ?> />  <label for="refetch">Refetch URL(s)</label>
+                    </div>
+                    <p class="note">
+                        URL Format Examples:<br />
+                        www.domain.com/<br />
+                        www.domain.com/product/url<br />
+                        www.domain.com/cms/page
+                    </p>
+                </div>
+
+                <div>&nbsp;</div>
+                <label for="cat_urls"><strong>Category URLs to Clear: </strong></label>
+
+                <div>
+                    <textarea name="cat_urls" id="cat_urls"><?php echo $this->getRequest()->get('cat_urls'); ?></textarea>
+                    <div class="refetch">
+                        <input type="checkbox" name="refetch_categories" id="refetch_categories" value="1"<?php if ($this->getRequest()->get('refetch_categories', false)): ?> checked="checked"<?php endif; ?> /> <label for="refetch_categories">Refetch Category URL(s)</label>
+                    </div>
+                    <p class="note">
+                        URL Format Examples:<br />
+                        www.domain.com/womens/<br />
+                        www.domain.com/mens/watches<br />
+                        www.domain.com/eyewear/?param=val
+                    </p>
+                </div>
+
+                <button onclick="$('cachesniperForm').submit()" title="<?php echo $this->__("Clear Cache"); ?>" id="btn_cacheclear"><span><?php echo $this->__("Clear Cache"); ?></span></button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<style type="text/css">
+textarea#urls { margin: 15px 0 5px; width: 100%; height: 250px; }
+textarea#cat_urls { margin: 15px 0 5px; width: 100%; height: 250px; }
+button#btn_cacheclear { margin-top: 25px; float: right; }
+p.note { font-style: italic; }
+div.refetch { float: right; }
+</style>

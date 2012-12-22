@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Firemage_CacheSniper>
+            <version>0.0.1</version>
+        </Firemage_CacheSniper>
+    </modules>
+    <global>
+        <models>
+            <firemage_cachesniper>
+                <class>Firemage_CacheSniper_Model</class>
+            </firemage_cachesniper>
+            <enterprise_pagecache>
+                <rewrite>
+                    <cookie>Firemage_CacheSniper_Model_PageCache_Cookie</cookie>
+                </rewrite>
+            </enterprise_pagecache>
+        </models>
+        <blocks>
+            <firemage_cachesniper>
+                <class>Firemage_CacheSniper_Block</class>
+            </firemage_cachesniper>
+        </blocks>
+        <helpers>
+            <firemage_cachesniper>
+                <class>Firemage_CacheSniper_Helper</class>
+            </firemage_cachesniper>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <firemage_cachesniper before="Mage_Adminhtml">Firemage_CacheSniper_Adminhtml</firemage_cachesniper>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <firemage_cachesniper>
+                    <file>firemage_cachesniper.xml</file>
+                </firemage_cachesniper>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

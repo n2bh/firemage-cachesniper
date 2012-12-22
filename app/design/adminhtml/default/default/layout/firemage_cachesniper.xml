@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_cachesniper_index>
+        <reference name="content">
+            <block type="firemage_cachesniper/adminhtml_cachesniper" name="firemage_cachesniper" template="firemage/cachesniper.phtml" />
+        </reference>
+    </adminhtml_cachesniper_index>
+</layout>

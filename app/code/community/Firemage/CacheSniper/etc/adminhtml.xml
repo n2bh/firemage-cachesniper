@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <firemage_cachesniper module="firemage_cachesniper" translate="title">
+                                <title>Cache Sniper</title>
+                                <sort_order>99999</sort_order>
+                            </firemage_cachesniper>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <system module="firemage_cachesniper">
+            <title>System</title>
+            <children>
+                <firemage_cachesniper module="firemage_cachesniper" translate="title">
+                    <title>Cache Sniper</title>
+                    <action>adminhtml/cachesniper</action>
+                    <sort_order>89</sort_order>
+                    <depends>
+                        <module>Firemage_CacheSniper</module>
+                    </depends>
+                </firemage_cachesniper>
+            </children>
+        </system>
+    </menu>
+</config>
