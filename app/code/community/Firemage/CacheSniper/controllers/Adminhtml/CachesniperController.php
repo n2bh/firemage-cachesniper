@@ -18,6 +18,8 @@
 
 /**
  * Cache Sniper Main Admin Controller
+ *
+ * @todo Refactor this index action
  */
 class Firemage_CacheSniper_Adminhtml_CachesniperController extends Mage_Adminhtml_Controller_Action
 {

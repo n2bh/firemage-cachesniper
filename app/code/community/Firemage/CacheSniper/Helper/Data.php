@@ -132,6 +132,8 @@ class Firemage_CacheSniper_Helper_Data extends Mage_Core_Helper_Data
     /**
      * Clear Page (CMS, Product)
      *
+     * @todo Add Design Package to Cache Keys
+     * @todo Reduce complexity of this method
      * @param $url
      * @return bool
      */
@@ -178,6 +180,8 @@ class Firemage_CacheSniper_Helper_Data extends Mage_Core_Helper_Data
     /**
      * Clear Category URL
      *
+     * @todo Add Design Package to Cache Keys
+     * @todo Reduce complexity of this method
      * @param $url
      * @return bool
      */
