@@ -21,6 +21,11 @@
  */
 class Firemage_CacheSniper_Helper_Data extends Mage_Core_Helper_Data
 {
+    /**
+     * Store URLs Array
+     *
+     * @var array
+     */
     private $_storeUrls = null;
 
     /**
@@ -301,8 +306,8 @@ class Firemage_CacheSniper_Helper_Data extends Mage_Core_Helper_Data
         }
         catch (Exception $e)
         {
-            Mage::throwException($this->__('Unable to fetch URL: %s', $url));
             Mage::logException($e);
+            Mage::throwException($this->__('Unable to fetch URL: %s', $url));
             return false;
         }
     }
