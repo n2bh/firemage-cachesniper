@@ -12,7 +12,11 @@ This module allows a Magento administrator to clear Full Page Cache for specific
 
 
 #### Prerequisites ####
+- Magento 1.11
 - Magento 1.11 Enteprise_PageCache enabled
 
 #### Installation ####
-- TBD
+
+ 1. Install [modman](https://github.com/colinmollenhour/modman)
+ 2. Run modman install command:
+   * `modman clone git@github.com:tdlm/firemage-cachesniper.git`
