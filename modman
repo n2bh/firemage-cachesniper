@@ -1,0 +1,5 @@
+
+app/etc/modules/Firemage_CacheSniper.xml app/etc/modules/Firemage_CacheSniper.xml
+app/code/community/Firemage/CacheSniper app/code/community/Firemage/CacheSniper
+app/design/adminhtml/default/default/layout/firemage_cachesniper.xml app/design/adminhtml/default/default/layout/firemage_cachesniper.xml
+app/design/adminhtml/default/default/template/firemage/cachesniper.phtml app/design/adminhtml/default/default/template/firemage/cachesniper.phtml
